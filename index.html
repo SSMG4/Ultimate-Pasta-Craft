@@ -71,6 +71,14 @@
   </header>
 
   <main>
+  <div style="text-align: center; margin-bottom: 1rem;">
+  <input
+    type="text"
+    id="searchBar"
+    placeholder="Search Creepypasta versions..."
+    style="padding: 0.5rem; width: 80%; max-width: 400px; background: #111; color: white; border: 1px solid #333; border-radius: 6px;"
+  />
+</div>
     <ul class="version-list" id="versionList">
       <!-- Example entries -->
       <li data-title="Herobrine v1.0" data-link="https://example.com/herobrine">
@@ -84,36 +92,50 @@
     </ul>
   </main>
 
-  <script>
-    const translations = {
-      en: {
-        title: "Ultimate Pasta Craft",
-        subtitle: "A full archive of Minecraft Creepypasta versions",
-        langLabel: "🌐 Language:"
-      },
-      fr: {
-        title: "Ultimate Pasta Craft",
-        subtitle: "Une archive complète des versions Creepypasta de Minecraft",
-        langLabel: "🌐 Langue :"
-      },
-      ru: {
-        title: "Ultimate Pasta Craft",
-        subtitle: "Полный архив версий Minecraft Creepypasta",
-        langLabel: "🌐 Язык:"
-      }
-    };
+<script>
+  const translations = {
+    en: {
+      title: "Ultimate Pasta Craft",
+      subtitle: "A full archive of Minecraft Creepypasta versions",
+      langLabel: "🌐 Language:"
+    },
+    fr: {
+      title: "Ultimate Pasta Craft",
+      subtitle: "Une archive complète des versions Creepypasta de Minecraft",
+      langLabel: "🌐 Langue :"
+    },
+    ru: {
+      title: "Ultimate Pasta Craft",
+      subtitle: "Полный архив версий Minecraft Creepypasta",
+      langLabel: "🌐 Язык:"
+    }
+  };
 
-    const langSelect = document.getElementById("langSelect");
-    const title = document.getElementById("title");
-    const subtitle = document.getElementById("subtitle");
-    const langLabel = document.getElementById("langLabel");
+  const langSelect = document.getElementById("langSelect");
+  const title = document.getElementById("title");
+  const subtitle = document.getElementById("subtitle");
+  const langLabel = document.getElementById("langLabel");
 
-    langSelect.addEventListener("change", () => {
-      const lang = langSelect.value;
-      title.textContent = translations[lang].title;
-      subtitle.textContent = translations[lang].subtitle;
-      langLabel.textContent = translations[lang].langLabel;
+  langSelect.addEventListener("change", () => {
+    const lang = langSelect.value;
+    title.textContent = translations[lang].title;
+    subtitle.textContent = translations[lang].subtitle;
+    langLabel.textContent = translations[lang].langLabel;
+  });
+
+  // 🔍 Search bar logic
+  const searchBar = document.getElementById("searchBar");
+  const versionList = document.getElementById("versionList");
+
+  searchBar.addEventListener("input", () => {
+    const query = searchBar.value.toLowerCase();
+    const items = versionList.querySelectorAll("li");
+
+    items.forEach(item => {
+      const text = item.dataset.title.toLowerCase();
+      item.style.display = text.includes(query) ? "block" : "none";
     });
-  </script>
+  });
+</script>
 </body>
 </html>
