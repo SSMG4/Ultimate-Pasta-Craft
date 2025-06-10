@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimate Pasta Craft</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    .language-selector {
+      margin-top: 1rem;
+    }
+
+    select {
+      background: #111;
+      color: #fff;
+      border: 1px solid #333;
+      padding: 0.5rem;
+    }
+
+    .version-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .version-list li {
+      background: #111;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .version-list a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    .version-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Ultimate Pasta Craft</h1>
+    <p id="subtitle">A full archive of Minecraft Creepypasta versions</p>
+    <div class="language-selector">
+      <label for="langSelect" id="langLabel">🌐 Language:</label>
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <ul class="version-list" id="versionList">
+      <!-- Example entries -->
+      <li data-title="Herobrine v1.0" data-link="https://example.com/herobrine">
+        <strong>Herobrine v1.0</strong><br />
+        <a href="https://example.com/herobrine" target="_blank">Forum Link</a>
+      </li>
+      <li data-title="Null v2.3" data-link="https://example.com/null">
+        <strong>Null v2.3</strong><br />
+        <a href="https://example.com/null" target="_blank">Forum Link</a>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Ultimate Pasta Craft",
+        subtitle: "A full archive of Minecraft Creepypasta versions",
+        langLabel: "🌐 Language:"
+      },
+      fr: {
+        title: "Ultimate Pasta Craft",
+        subtitle: "Une archive complète des versions Creepypasta de Minecraft",
+        langLabel: "🌐 Langue :"
+      },
+      ru: {
+        title: "Ultimate Pasta Craft",
+        subtitle: "Полный архив версий Minecraft Creepypasta",
+        langLabel: "🌐 Язык:"
+      }
+    };
+
+    const langSelect = document.getElementById("langSelect");
+    const title = document.getElementById("title");
+    const subtitle = document.getElementById("subtitle");
+    const langLabel = document.getElementById("langLabel");
+
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      title.textContent = translations[lang].title;
+      subtitle.textContent = translations[lang].subtitle;
+      langLabel.textContent = translations[lang].langLabel;
+    });
+  </script>
+</body>
+</html>
