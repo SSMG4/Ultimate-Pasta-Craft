@@ -10,7 +10,6 @@ A database of every single Minecraft Creepypasta versions i could find (with the
 ![GitHub Repo stars](https://img.shields.io/github/stars/SSMG4/Ultimate-Pasta-Craft?color=informational&label=Stars)
 
 <h1 align="center">Platforms</h1>
-<div align="center">
 
 - Android
 - Windows
