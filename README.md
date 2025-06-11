@@ -11,6 +11,7 @@ A database of every single Minecraft Creepypasta versions i could find (with the
 
 <h1 align="center">Platforms</h1>
 <div align="left">
+  
 - Android
 - Windows
 - Or at [My Domain](https://ssmg4.github.io/Ultimate-Pasta-Craft)!
