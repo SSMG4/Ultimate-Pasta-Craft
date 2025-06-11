@@ -16,4 +16,4 @@ A database of every single Minecraft Creepypasta versions i could find (with the
 - Windows
 - Or at [My Domain](https://ssmg4.github.io/Ultimate-Pasta-Craft)!
 
-&copy; 2025 SSMG4. All Rights Reserved.
+<p align="center">&copy; 2025 SSMG4. All Rights Reserved.</p>
