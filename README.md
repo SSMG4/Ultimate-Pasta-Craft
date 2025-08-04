@@ -4,12 +4,12 @@
 <h1 align="center">Ultimate Pasta Craft</h1>
 <div align="center">
   
-A database of every single Minecraft Creepypasta versions i could find (with their respective forum link if available)
+A database of every single Minecraft PC Creepypasta versions i could find (with their respective forum link if available)
 
 ![GitHub all releases](https://img.shields.io/github/downloads/SSMG4/Ultimate-Pasta-Craft/total?label=Downloads&logo=github)
 ![GitHub Repo stars](https://img.shields.io/github/stars/SSMG4/Ultimate-Pasta-Craft?color=informational&label=Stars)
 
-<h1 align="center">Platforms</h1>
+<h1 align="center">Client Platforms</h1>
 <div align="left">
   
 - Android
